@@ -33,7 +33,12 @@
 1. The top source countries to generate DDoS attacks were the United States and Russia, followed by the United Kingdom.
 2. 
 
-
 ![](image/AzureDDOS/1649659945155.png)
 
 ![](image/AzureDDOS/1649659931188.png)
+
+
+![](image/superdisk/1650790988891.png)![](image/superdisk/1650790988891.png)![](image/superdisk/1650790988891.png)![](image/superdisk/1650790988891.png)![](image/superdisk/1650790988891.png)
+
+
+![](image/superdisk/1650790988891.png)
