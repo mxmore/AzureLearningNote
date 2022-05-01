@@ -1,0 +1,61 @@
+identity-server:
+  host: http://139.217.61.251:9110
+  registerurl: /register
+
+spring:
+  application:
+    name: outsource-service
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rx-prod-db.mysql.database.chinacloudapi.cn:3306/ms-outsource?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&useSSL=true&requireSSL=false
+    username: rxdbadmin@rx-prod-db
+    password: 5@xxE7B2#6L)b6@d
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 600000
+      pool-name: DatebookHikariCP
+      max-lifetime: 600000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate.ddl-auto: none
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://139.217.61.251:9110/oauth/token
+      userAuthorizationUri: http://139.217.61.251:9110/oauth/authorize
+      clientId: 008fec3d-c125-409e-9f8d-ef7724ec21df
+      clientSecret: 222
+      grantType: password
+    resource:
+      userInfoUri: http://139.217.61.251:9110/user
+
+# 认证服务
+identity:
+  server:
+    uri: 139.217.61.251
+    port: 9110
+    clientId: 008fec3d-c125-409e-9f8d-ef7724ec21df
+    clientSecret: 222
+    path:
+      register: register
+      updatePassword: updatePassword
+minio:
+  server:
+    url: http://b2s03.chinanorth2.cloudapp.chinacloudapi.cn:9000
+    accessKey: 3V6LTIAIBWHZT74RN0AT
+    secretKey: x5gQ4Iq9OFn3MebXRLSQ6oE6GgYEfZxhSnuE+dt0
+    bucket: rx-outsourcing
+logging:
+  level:
+    root: info
+
+file:
+  bucket: ms-outsourcing
