@@ -65,5 +65,4 @@ All public IP addresses created before the introduction of SKUs are Basic SKU pu
 
 Type: ipconfig and press ENTER. Look at the result and look for the line that says IPv4 address and IPv6 address . What is marked in red are your private IPv4 and IPv6 addresses . You’ve got it!
 
-
 ## psping或paping
